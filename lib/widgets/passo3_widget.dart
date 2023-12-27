@@ -23,49 +23,42 @@ class Passo3Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //  height: MediaQuery.sizeOf(context).height * 0.25,
       key: homeController.key3,
-      color: const Color(0xffF7F1F7),
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   '3º PASSO',
                   style: GoogleFonts.robotoCondensed(
-                      color: const Color(0xff5A2683),
+                      color: Color(0xff5A2683),
                       fontWeight: FontWeight.bold,
                       decoration: TextDecoration.underline,
-                      decorationColor: const Color(0xff5A2683),
+                      decorationColor: Colors.white,
                       fontSize: 16),
                 ),
                 Text(
                   ': CADASTRE-SE NO CHIPPIX',
                   style: GoogleFonts.robotoCondensed(
-                      color: const Color(0xff5A2683),
+                      color: Color(0xff5A2683),
                       fontWeight: FontWeight.bold,
                       fontSize: 16),
                 ),
               ],
             ),
-          ),
-          Center(
-            child: Column(
-              children: [
-                MediaQuery.sizeOf(context).width > 720
-                    ? Column(
-                        children: conteudoPasso2(context),
-                      )
-                    : Row(
-                        children: conteudoPasso2(context),
-                      )
-              ],
-            ),
-          ),
-        ],
+            MediaQuery.sizeOf(context).width > 720
+                ? Column(
+                    children: conteudoPasso2(context),
+                  )
+                : Row(
+                    children: conteudoPasso2(context),
+                  )
+          ],
+        ),
       ),
     );
   }
@@ -102,13 +95,10 @@ class Passo3Widget extends StatelessWidget {
       SizedBox(
         width: MediaQuery.sizeOf(context).width * 0.3,
         child: MediaQuery.sizeOf(context).width > 720
-            ? Container(
-                height: 200,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: conteudoBotoesLoja(context, false),
-                ),
+            ? Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: conteudoBotoesLoja(context, false),
               )
             : Column(
                 children: conteudoBotoesLoja(context, true),
@@ -140,14 +130,14 @@ class Passo3Widget extends StatelessWidget {
           height: 50,
         ),
       ),
-      Text(
-        "CLIQUE PARA BAIXAR",
-        style: GoogleFonts.robotoCondensed(
-            color: const Color(0xff5A2683),
-            fontWeight: FontWeight.bold,
-            decorationColor: const Color(0xff5A2683),
-            fontSize: 8),
-      )
+      // Text(
+      //   "CLIQUE PARA BAIXAR",
+      //   style: GoogleFonts.robotoCondensed(
+      //       color: Color(0xff5A2683),
+      //       fontWeight: FontWeight.bold,
+      //       decorationColor: const Color(0xff5A2683),
+      //       fontSize: 10),
+      // )
     ];
   }
 }

@@ -127,14 +127,14 @@ class Passo2Widget extends StatelessWidget {
           height: 50,
         ),
       ),
-      Text(
-        "CLIQUE PARA BAIXAR",
-        style: GoogleFonts.robotoCondensed(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            decorationColor: const Color(0xff5A2683),
-            fontSize: 8),
-      )
+      // Text(
+      //   "CLIQUE PARA BAIXAR",
+      //   style: GoogleFonts.robotoCondensed(
+      //       color: Colors.white,
+      //       fontWeight: FontWeight.bold,
+      //       decorationColor: const Color(0xff5A2683),
+      //       fontSize: 10),
+      // )
     ];
   }
 }
