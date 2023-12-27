@@ -146,7 +146,7 @@ class Passo3Widget extends StatelessWidget {
             color: const Color(0xff5A2683),
             fontWeight: FontWeight.bold,
             decorationColor: const Color(0xff5A2683),
-            fontSize: 12),
+            fontSize: 8),
       )
     ];
   }
