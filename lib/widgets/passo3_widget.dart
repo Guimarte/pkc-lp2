@@ -3,18 +3,17 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pkc/pages/home/home_controller.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:youtube_player_iframe/youtube_player_iframe.dart';
+import 'package:youtube_player_iframe_plus/youtube_player_iframe_plus.dart';
 
 class Passo3Widget extends StatelessWidget {
   Passo3Widget({super.key});
   HomeController homeController = Get.find();
-  final _controller2 = YoutubePlayerController.fromVideoId(
-    videoId: 'oOW-dffmB1Q',
-    autoPlay: false,
+
+  YoutubePlayerController _controller = YoutubePlayerController(
+    initialVideoId: 'yjWS1k2T-PA',
     params: const YoutubePlayerParams(
         enableJavaScript: true, showControls: true, showFullscreenButton: true),
   );
-
   buttonSize(BuildContext context) {
     return MediaQuery.sizeOf(context).width *
         (MediaQuery.sizeOf(context).width > 720 ? 0.25 : 0.80);
@@ -73,7 +72,7 @@ class Passo3Widget extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(6),
+            borderRadius: BorderRadius.circular(5),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
@@ -81,8 +80,8 @@ class Passo3Widget extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.5,
               child: AspectRatio(
                 aspectRatio: 16 / 9, // Defina a proporção desejada para o vídeo
-                child: YoutubePlayer(
-                  controller: _controller2,
+                child: YoutubePlayerIFramePlus(
+                  controller: _controller,
                 ),
               ),
             ),

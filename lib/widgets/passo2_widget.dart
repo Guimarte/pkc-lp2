@@ -10,7 +10,7 @@ class Passo2Widget extends StatelessWidget {
 
   HomeController homeController = Get.find();
 
-  final _controller = YoutubePlayerController.fromVideoId(
+  YoutubePlayerController _controller = YoutubePlayerController.fromVideoId(
     videoId: 'oOW-dffmB1Q',
     autoPlay: false,
     params: const YoutubePlayerParams(

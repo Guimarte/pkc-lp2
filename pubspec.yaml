@@ -46,6 +46,7 @@ dependencies:
   stroke_text: ^0.0.2
   flutter_emoji: ^2.5.1
   url_launcher: ^6.2.1
+  youtube_player_iframe_plus: ^2.3.2
 
 dev_dependencies:
   flutter_test:
